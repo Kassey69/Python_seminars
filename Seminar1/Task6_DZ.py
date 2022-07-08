@@ -11,9 +11,9 @@
 
 def day_week(n):
     if n > 0 and n <= 7:
-        if n > 0 and n <=5:
+        if n > 0 and n <= 5:
             print(f'будний день {n}')
-        elif n>=6 and n < 8:
+        elif n >= 6 and n < 8:
             print(f'выходной {n}')
     else:
          print(f'день введен некорректно {n}')
@@ -22,3 +22,5 @@ def day_week(n):
 # n = random.randint(1,10)
 n = int(input(f'Введите день недели \n'))
 day_week(n)
+
+
