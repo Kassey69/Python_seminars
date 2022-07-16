@@ -3,7 +3,7 @@
 import random
 import string
 def generate_alphanum_random_string(length): # генерируем рандомную строку из чисел и букв
-    length = random.randint(1,10)
+    length = random.randint(1,12)
     for i in range(length):
         letters_and_digits = string.ascii_letters + string.digits
         rand_string = ''.join(random.sample(letters_and_digits, length))
@@ -29,7 +29,7 @@ def numder(my_list): # ищем в строках любые числа и вы�
 def adapter_clova_chislo(number): # окончание исправляем у слова число в выводе
     a = number % 10 # a - остаток от деления, number - число
     if number > 0: 
-        if (11 <= number <= 14): return 'чисел' 
+        if (11 <= number <= 12): return 'чисел' 
         elif (a == 0): return 'чисел' 
         elif (a == 1): return 'число'
         elif 2 <= a <= 4: return 'числа'
