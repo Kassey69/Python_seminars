@@ -1,79 +1,153 @@
 # КНБ - вы играете с ботом, варианты раунда игры - победа 1 очко, проигрыш 0 очков, ничья 0.5 балла
-# играть неограниченное количетсво раундов и вся статистика созранялась
+# играть неограниченное количетсво раундов и вся статистика сохранялась
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# камень
+# ножницы
+# бумага
 
 import random
 
-
-
-a = input('введите К или Н или Б (либо q для выхода): ')
-
 result1 = 0
 result2 = 0
+	
+status = True
+while status != False:
 
-# def knb(a):
-# 	global result1, result2
-#
-# 	if a == 'q':
-# 		print(result1, result2)
-# 	else:
-# 		while
+	for i in range(5):
+
+		player1 = input(f'Выберите камень(1) ножницы(2) бумагу(3)\n')	
+
+		znach = 'k n b'
+		lir = list ( map ( str , znach.split()))
+		player2 = random.choice(lir)
+
+		if player2 == 'k': player2 = "камень"  # замена
+		elif player2 == 'n': player2 = "ножницы"
+		elif player2 == 'b': player2 = "бумагу"
+
+		if player1 == '1': player1 = 'камень' # очень важно присвоить значение =, а не равно
+		elif player1 == '2': player1 = 'ножницы'
+		elif player1 == '3': player1 = 'бумагу'
+
+		print(f'Я выбрал {player1}: ')
+		print(f'player2 выбрал {player2}: ')
 
 
-x = random.randint(0, 3)
+		if player1 == 'камень': player1 = 'k' # замена
+		elif player1 == 'ножницы': player1 = 'n'
+		elif player1 == 'бумагу': player1 = 'b'
 
-while True:
-	x = random.randint(0, 3)
-	if x != 'q':
-		if x == 0:
-			if a == 'К':
-				result1 += 0
-				result2 += 0
-			if a == 'Н':
-				result1 += 1
-				result2 += 0
-			if a == 'Б':
-				result1 += 0
-				result2 += 1
-		if x == 1:
-			if a == 'К':
-				result1 += 0
-				result2 += 1
-			if a == 'Н':
-				result1 += 0
-				result2 += 0
-			if a == 'Б':
-				result1 += 1
-				result2 += 0
-		if x == 2:
-			if a == 'К':
-				result1 += 1
-				result2 += 0
-			if a == 'Н':
-				result1 += 0
-				result2 += 1
-			if a == 'Б':
-				result1 += 0
-				result2 += 0
+		if player2 == "камень": player2 = 'k'
+		elif player2 == "ножницы": player2 = 'n'
+		elif player2 == "бумагу": player2 = 'b'
+
+
+		if player1 == 'k' and player2 == 'k':
+			result1 += 0.5
+			result2 += 0.5
+			print(f'ничья;  общий счет: {result1}:{result2}' )
+		elif player1 == 'k' and player2 == 'n':
+			result1 += 1
+			result2 += 0
+			print(f'победил player1;  общий счет: {result1}:{result2}')
+		elif player1 == 'k' and player2 == 'b':
+			result1 += 0
+			result2 += 1
+			print(f'победил player2;  общий счет: {result1}:{result2}')
+		elif player1 == 'n' and player2 == 'k':
+			result1 += 0
+			result2 += 1
+			print(f'победил player2;  общий счет: {result1}:{result2}')
+		elif player1 == 'n' and player2 == 'n':
+			result1 += 0.5
+			result2 += 0.5
+			print(f'ничья;  общий счет: {result1}:{result2}')
+		elif player1 == 'n' and player2 == 'b':
+			result1 += 0
+			result2 += 1
+			print(f'победил player2;  общий счет: {result1}:{result2}')
+		elif player1 == 'b' and player2 == 'k':
+			result1 += 1
+			result2 += 0
+			print(f'победил player1;  общий счет: {result1}:{result2}')
+		elif player1 == 'b' and player2 == 'b':
+			result1 += 0.5
+			result2 += 0.5
+			print(f'ничья;  общий счет: {result1}:{result2}')
+		elif player1 == 'b' and player2 == 'n':
+			result1 += 0
+			result2 += 1
+			print(f'победил player2;  общий счет: {result1}:{result2}')
 		else:
-			break
-print(result1, result2)
+			print(f'общий счет {result1}:{result2}   выберите клавиши 1 2 3 ')
+
+	status = input('Введите "q", чтобы выйти из игры.')
+	if status == 'q' or status == 'quit':
+		status = False
+
+
+
+
+
+
+
+
+
+
+
+# import random
+
+
+
+# a = input('введите К или Н или Б (либо q для выхода): ')
+
+# result1 = 0
+# result2 = 0
+
+# # def knb(a):
+# # 	global result1, result2
+# #
+# # 	if a == 'q':
+# # 		print(result1, result2)
+# # 	else:
+# # 		while
+
+
+# x = random.randint(0, 3)
+
+# while True:
+# 	x = random.randint(0, 3)
+# 	if x != 'q':
+# 		if x == 0:
+# 			if a == 'К':
+# 				result1 += 0
+# 				result2 += 0
+# 			if a == 'Н':
+# 				result1 += 1
+# 				result2 += 0
+# 			if a == 'Б':
+# 				result1 += 0
+# 				result2 += 1
+# 		if x == 1:
+# 			if a == 'К':
+# 				result1 += 0
+# 				result2 += 1
+# 			if a == 'Н':
+# 				result1 += 0
+# 				result2 += 0
+# 			if a == 'Б':
+# 				result1 += 1
+# 				result2 += 0
+# 		if x == 2:
+# 			if a == 'К':
+# 				result1 += 1
+# 				result2 += 0
+# 			if a == 'Н':
+# 				result1 += 0
+# 				result2 += 1
+# 			if a == 'Б':
+# 				result1 += 0
+# 				result2 += 0
+# 		else:
+# 			break
+# print(result1, result2)

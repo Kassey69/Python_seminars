@@ -16,6 +16,7 @@ print(f'Принимается число на вход: {n}')
 def number(n):
     result = 0
     n = list(str(n).replace('.','')) # ['4', '1', '9', '8']
+    print(n)
     for i in n:
         i = int(i) # меняем строку в целое число
         result += i # складываем числа 

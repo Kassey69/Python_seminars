@@ -16,7 +16,7 @@
 import random
 
 def drobs(n):
-    n = round(n - int(n),2)
+    # n = round(n - int(n),2)
     n = str(n).replace('.','')
     print(n)
     return (int(str(n[1])))

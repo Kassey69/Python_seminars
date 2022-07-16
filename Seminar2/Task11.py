@@ -28,21 +28,21 @@ from random import randint
 # n = int(input())
 # n = randint(-500, 1500)
 
-def robot(n):
-    if 0 <= n <= 1000:  
-        if n == 1 or (n > 20 and n % 10 == 1) or (n > 100 and n % 100 == 1):
-            print (f'{n} программист')
-        elif 2 <= n <= 4 or (n > 21 and 2 <= n % 10 <= 4) or (n > 101 and 2 <= n % 100 <= 4):
-            print (f'{n} программистa')
-        else: print (f'{n} программистов')
-    else: print (f'{n} ошибка предела допустимых значений' )
-    return n
-# robot(n)
-count = 0
-for i in range(0,1+2,1): # запуск проверки сразу шаблонно
-    i = randint(-500, 1500)
-    count += 1
-    print(f'Значение {count}:'), robot(i)
+# def robot(n):
+#     if 0 <= n <= 1000:  
+#         if n == 1 or (n > 20 and n % 10 == 1) or (n > 100 and n % 100 == 1):
+#             print (f'{n} программист')
+#         elif 2 <= n <= 4 or (n > 21 and 2 <= n % 10 <= 4) or (n > 101 and 2 <= n % 100 <= 4):
+#             print (f'{n} программистa')
+#         else: print (f'{n} программистов')
+#     else: print (f'{n} ошибка предела допустимых значений' )
+#     return n
+# # robot(n)
+# count = 0
+# for i in range(4): # запуск проверки сразу шаблонно
+#     i = randint(-500, 1500)
+#     count += 1
+#     print(f'Значение {count}:'), robot(i)
    
 
 def funk(number):
