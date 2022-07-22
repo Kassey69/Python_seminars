@@ -113,104 +113,8 @@ crez3(myl = ['Локомотив'])
 
 
 
-# n = 5
-# slovar = {}
-# for i in range(n):
-#     myl = [1,5,2,9]
-#     myl[1] = random.randint(1,10)
-#     myl[3] = random.randint(1,10)
-#     d = {myl[0]:myl[1], myl[2]:myl[3]}
-#     win = ''
-#     if myl[1] > myl[3]:
-#         win = myl[0]
-#     elif myl[1] < myl[3]:
-#         win = myl[2]
-#     for key in d.keys(): # тоже самое что и d только работает намного быстрее, не занимая много памяти
-#         if key not in slovar.keys():
-#             slovar.update({key:[0, 0, 0, 0, 0]})
-#         slovar.get(key)[0] +=1
-#         if key == win:
-#             slovar.get(key)[1] +=1 
-#         elif win == '':
-#             slovar.get(key)[2] += 1
-#         else:
-#             slovar.get(key)[3] += 1    
-# for key in slovar.keys():
-#     slovar.get(key)[4] = slovar.get(key)[1]*3 + slovar.get(key)[2]
-#     print(key, end=':')
-#     for i in range(5):
-#         print(slovar.get(key)[i], end=' ')
-#     print()    
 
 
-
-    
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# # n = int(input())
-# n = 3
-# m = {} #итоговый словарик
-# for i in range(n):
-#     strs = [1, 10, 2, 3]
-#     d = {strs[0] : strs[1], strs[2] : strs[3]}
-#     winner = ''
-#     if int(strs[1]) > int(strs[3]):
-#         winner = strs[0]
-#     elif int(strs[1]) < int(strs[3]):
-#         winner = strs[2]
-#     for key in d.keys():
-#         if key not in m.keys():
-#             m.update({key:[0, 0, 0, 0, 0]})
-#         m.get(key)[0] += 1
-#         if key == winner:
-#             m.get(key)[1] += 1
-#         elif winner == '':
-#             m.get(key)[2] += 1
-#         else:
-#             m.get(key)[3] += 1
-# for key in m.keys():
-#     m.get(key)[4] = m.get(key)[1]*3 + m.get(key)[2]
-#     print(key, end=':')
-#     for i in range(5):
-#         print(m.get(key)[i], end=' ')
-#     print()
 
 
 # col = int(input())
@@ -288,6 +192,8 @@ crez3(myl = ['Локомотив'])
 # for team, res in results.items(): 
 #         res[4] = res[1]*3 + res[2] 
 #         print(team+":", res[0], res[1], res[2], res[3], res[4]) 
+
+
 
 
 
