@@ -60,19 +60,22 @@
 # 2 вариант
 import random
 
-n1 = random.randint(0,20)
-n2 = random.randint(0,20)
-# operas = input(f'Введите операцию (+, -, /, *, mod, pow, div)')
+def rand_operas():
+    n1 = random.randint(0,20)
+    n2 = random.randint(0,20)
+    # operas = input(f'Введите операцию (+, -, /, *, mod, pow, div)')
 
-allText = '+ - / * mod pow div'
-lir = list ( map ( str , allText.split()))
-operas = random.choice(lir)
-print(n1, operas, n2)
+    allText = '+ - / * mod pow div'
+    lir = list ( map ( str , allText.split()))
+    operas = random.choice(lir)
+    print(n1, operas, n2)
+    return n1, operas, n2
 
 # n1, operas, n2 = map(str, input().split())
 # n1, operas, n2 = (i for i in str(input()).split()) # создаем единую строчку из 3 элементов выражения
 # объявлена строка ввода данных input(). Функция .split() разделяет ее на список необходимых нам строк: в данном случае 3
 
+# 2 % 4 = 2 это уже остаток отделения 2
 
 def calk(n1, operas, n2): 
     n1 = int(n1) # переводим в целочисленные значения
@@ -93,6 +96,7 @@ def calk(n1, operas, n2):
     elif operas == 'div': print(n1 // n2)
     # else: print('Неверная операция')
     return operas
+n1, operas, n2 = rand_operas()
 calk(n1, operas, n2)
 
 

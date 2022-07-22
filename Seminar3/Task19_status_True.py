@@ -51,7 +51,7 @@ def slovar(list_may):
     l ['сред. ариф. '] = sred_ar
     return l
 
-def crezi(list_may):
+def crezi(list_may): # пришлось все значения переводить в int потому что иначе не получалась проверка выше, тут деление+сложение
     number = [ int (i) for i in list_may]
     return number
     

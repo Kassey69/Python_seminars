@@ -7,7 +7,8 @@
 
 import random
 
-def spisok(n):
+def spisok():
+    n = random.randint(4,10)
     l = []
     for i in range(n):
         l.append(random.randint(-100, 100))
@@ -20,8 +21,6 @@ def maxs(l):
             max = i
     return max
 
-# n = random.randint(4,12)
-n = 5
-f = spisok(n)
+f = spisok()
 print(f)
 print(maxs(f))

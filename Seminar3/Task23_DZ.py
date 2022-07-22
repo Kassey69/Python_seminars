@@ -19,9 +19,9 @@ number = random.randint(3,10)
 n = [random.randint(3,10) for i in range(number)]
 print(n)
 
-def par_num(n):
-    return [n[-1-i] * n[i] for i in range(math.ceil(len(n)/2))]
-print(par_num(n))
+# def par_num(n):
+#     return [n[-1-i] * n[i] for i in range(math.ceil(len(n)/2))]
+# print(par_num(n))
 
 
 
@@ -34,7 +34,7 @@ def par_num(n):
         result = n[-1-i] * n[i]
         l.append(result)
     return l
-# print(par_num(n))
+print(par_num(n))
 
 
 

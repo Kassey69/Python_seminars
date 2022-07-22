@@ -9,10 +9,10 @@ def generate_alphanum_random_string(length): # генерируем рандом
         rand_string = ''.join(random.sample(letters_and_digits, length))
     return rand_string 
 def generate_stroki(stroka): # генерируем много строк из чисел и букв
-    mnogo_trok = []
+    mnogo_strok = []
     for i in generate_alphanum_random_string(stroka):
-        mnogo_trok.append(generate_alphanum_random_string(stroka))
-    return mnogo_trok
+        mnogo_strok.append(generate_alphanum_random_string(stroka))
+    return mnogo_strok
 def numder(my_list): # ищем в строках любые числа и выводим на экран
     count = 0
     col = 0

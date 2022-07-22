@@ -5,12 +5,13 @@ import random
 import json
 
 # n = int(input('введите n'))
-n = random.randint(3,10)
-def spisok(n):
+# n = random.randint(3,10)
+def spisok():
+    n = random.randint(3,10)
     return [i for i in range(-n, n+1)]
     return list(range(-n, n+1))
-print(spisok(n))
-spisk = spisok(n)
+print(spisok())
+spisk = spisok()
 
 
 with open('data.json', 'w', encoding='utf-8') as data: # ну а тут открываем файл и принудительно записываем в него

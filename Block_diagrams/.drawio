@@ -1,0 +1,108 @@
+<mxfile host="65bd71144e">
+    <diagram id="KdFUcOEuj9a2bhXQw9Y5" name="Page-1">
+        <mxGraphModel dx="608" dy="389" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="Начало, Конец" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="40" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Ввод, Вывод&lt;br&gt;каких либо значений" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+                    <mxGeometry x="55" y="120" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Процесс:&lt;br&gt;Любое выражение&lt;br&gt;Присвоение переменных, выполнение над ними каких то действий" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="55" y="210" width="150" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Условие и &lt;br&gt;ветвление в коде&lt;br&gt;while" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="90" width="170" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Подпрограмма:&lt;br&gt;Указывается вывод какойто функции" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="330" width="175" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Печать сообщений: Вывод в консоль" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="430" width="150" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Ссылка А&lt;br&gt;или 1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="560" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="9" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="50" y="570" as="sourcePoint"/>
+                        <mxPoint x="70" y="550" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="50" y="600"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="Ссылка А&lt;br&gt;или 1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="720" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="190" y="760" as="sourcePoint"/>
+                        <mxPoint x="230" y="810" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="230" y="760"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="Если не влазиет блок схема в одну страницы, то&lt;br&gt;указываем в конце нашего кода, где заканчивается&lt;br&gt;пространство ссылку, а на следующей странице&amp;nbsp;&lt;br&gt;мы начинаем блок схему с этой ссылки" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="650" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="6" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="360" y="160" as="sourcePoint"/>
+                        <mxPoint x="340" y="190" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="340" y="140"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="6" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="310" y="310" as="sourcePoint"/>
+                        <mxPoint x="590" y="190" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="590" y="140"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="да, &lt;br&gt;истинное условие" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="90" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="нет,&lt;br&gt;ложное условие" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="90" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Цикл с параметром&lt;br&gt;цикл, for" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="310" width="220" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="22" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="320" y="420" as="sourcePoint"/>
+                        <mxPoint x="360" y="240" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="320" y="350"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="22" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="310" y="290" as="sourcePoint"/>
+                        <mxPoint x="620" y="410" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="620" y="350"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="lyp702T6E60eQxy2iu8m" name="Page-2">
+        <mxGraphModel dx="608" dy="472" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="DPXYC6eZymW28LSq1sC3-0"/>
+                <mxCell id="DPXYC6eZymW28LSq1sC3-1" parent="DPXYC6eZymW28LSq1sC3-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

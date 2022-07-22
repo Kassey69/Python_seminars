@@ -18,15 +18,16 @@ sum(x1,x2)
 #     - 8,9 -> нет
 
 import random
-n = random.randint(2, 10)
-n2 = random.randint(2, 50)
-def nums(n, n2):
+
+def nums():
+    n = random.randint(2, 10)
+    n2 = random.randint(2, 50)
     print(n,n2)
     if n**2 == n2 or n2**2 == n:
-        print(f' одно из двух чисел является квадратом другово')
+        print(f'одно из двух чисел является квадратом другово')
     else:
-        print(f' не одно число не являектся квадратом другово')
+        print(f'не одно число не являектся квадратом другово')
     return(n**2 == n2 or n2**2 == n)
-print(nums(n, n2))
+nums()
 
 

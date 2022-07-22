@@ -4,7 +4,7 @@
 # Пример:
 
 # - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
-
+# n = [2, 3, 5, 9, 3] 
 from random import randint
 n = randint(5,10)
 My_list = [randint(1,10) for i in range(n)]

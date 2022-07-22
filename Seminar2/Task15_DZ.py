@@ -7,11 +7,13 @@
 
 import random
 
-n = random.randint(1,2) # выбор целых или дробных чисел
-if n == 1:
-    n = round(random.uniform(1, 100),2)
-else: n = random.randint(1,9999)
-print(f'Принимается число на вход: {n}')
+def rand():
+    n = random.randint(1,2) # выбор целых или дробных чисел
+    if n == 1:
+        n = round(random.uniform(1, 100),2)
+    else: n = random.randint(1,9999)
+    print(f'Принимается число на вход: {n}')
+    return n
 
 def number(n):
     result = 0
@@ -22,4 +24,6 @@ def number(n):
         result += i # складываем числа 
     print(f'Сумма цифр числа: {result}')
     return result
+    
+n = rand()  
 number(n)
