@@ -28,8 +28,6 @@
 
 
 
-from audioop import reverse
-
 
 def tablis(myl):
     n = 1
