@@ -7,16 +7,55 @@
 
 import random
 
-k = random.randint(3,9)
-def newlist(k):
-    number = []
-    for i in range(k+1):
-        number.append(random.randint(0,100))
-    return number
-print(newlist(k))
-
-def spisok(melist):
+def spisok():
+   k = random.randint(3,9)
    melist = '' 
+   for i in range(k, -1, -1):
+        num = random.randint(0,100)  
+        if i == 1:
+            melist += str(num) + 'x' 
+        elif i == 0:
+            melist += ' + ' + str(num) + ' = 0'      
+        else: 
+            melist += str(num) + 'x^' + str(i) + ' + '
+#    print(melist)
+   return melist 
+spisok()
+melist = spisok()
+with open('polynomial.txt', 'w') as data:
+    data.write(melist)
+
+
+
+import random
+
+def spisok():
+   k = random.randint(3,9)
+   melist = '' 
+   for i in range(k, -1, -1):
+        num = random.randint(0,100)  
+        if i == 1:
+            melist += str(num) + 'x' 
+        elif i == 0:
+            melist += ' + ' + str(num) + ' = 0'      
+        else: 
+            melist += str(num) + 'x^' + str(i) + ' + '
+#    print(melist)
+   return melist 
+spisok()
+
+melist = spisok()
+with open('polynomial.txt', 'w') as data:
+    data.write(melist)
+print(melist)
+
+melist = spisok()
+with open('polynomial2.txt', 'w') as data:
+    data.write(melist)
+print(melist)
+
+
+
 
 
 

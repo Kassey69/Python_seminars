@@ -27,7 +27,9 @@
 # Локомотив:2 2 0 0 6
 
 
-
+sparta = {}
+zenit = {}
+lokomotiv = {}
 
 def tablis(myl):
     n = 1
@@ -37,24 +39,29 @@ def tablis(myl):
         win = ''
         if myl[1] > myl[3]: win = myl[0]
         elif myl[1] < myl[3]: win = myl[2]
-
+        
+                                            # d1.update(d2) # добавляет ключ значение из одного словаря в другой 
+                                # y = d1.get('c', 'value')  # value,  Метод get() возвращает значение для указанного ключа, если ключ находится в словаре
         for key in d.keys(): # тоже самое что и d только работает намного быстрее, не занимая много памяти
+            
             if key not in slovar.keys():
                 slovar.update({key:[0, 0, 0, 0, 0]})
             slovar.get(key)[0] +=1
             if key == win: slovar.get(key)[1] +=1 
             elif win == '': 
-                
+             
                 slovar.get(key)[2] += 1
             else: slovar.get(key)[3] += 1  
-
+            
+    
     for key in slovar.keys():
-        slovar.get(key)[4] = slovar.get(key)[1]*3 + slovar.get(key)[2]
+        slovar.get(key)[4] = slovar.get(key)[1]*3 + slovar.get(key)[2]*1
+         
         print(key, end=':')
         for i in range(5):
             print(slovar.get(key)[i], end=' ')
-        print()    
-    return slovar  
+        print()   
+    return slovar   
 
 def crez1(myl):
     slov1 = {}
@@ -89,13 +96,33 @@ def crez3(myl):
     print()
     return myl
 
+
+
+
+
+
     # Вводим значения
-tablis(myl = ['Спартак  ',9,'Зенит    ',10])
+# tablis(myl = ['Спартак  ',9,'Зенит    ',10]) # myl = [1,9,2,10]
+# print("-------------------")
+# tablis(myl = ['Локомотив',12,'Зенит    ',3])
+# print("-------------------")
+# tablis(myl = ['Спартак  ',8,'Локомотив',15])
+# print("------------------------------")
+
+def cg(myl):
+    for i in range(len(myl)):
+        if myl[0] == 1: myl[0] ='Спартак  '
+        if myl[2] == 2: myl[2] ='Локомотив'
+        if myl[2] == 3: myl[2] ='Зенит    ' 
+    return  myl  
+
+    # Вводим значения
+tablis(cg(myl = [1,9,2,10])) # myl = [1,9,2,10]
 print("-------------------")
-tablis(myl = ['Локомотив',12,'Зенит    ',3])
+tablis(cg(myl = [3,12,2,3]))
 print("-------------------")
-tablis(myl = ['Спартак  ',8,'Локомотив',15])
-print("------------------------------")
+tablis(cg(myl = [1,8,3,15]))
+# print("------------------------------")
 print("  Общяя статистика ")
 crez1(myl = ['Спартак  '])
 crez2(myl = ['Зенит    '])
@@ -107,6 +134,92 @@ crez3(myl = ['Локомотив'])
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def tablis(myl):
+#     n = 1
+#     slovar = {}
+#     for i in range(n): 
+#         d = {myl[0]:myl[1], myl[2]:myl[3]}
+#         win = ''
+#         if myl[1] > myl[3]: win = myl[0]
+#         elif myl[1] < myl[3]: win = myl[2]
+
+#         for key in d.keys(): # тоже самое что и d только работает намного быстрее, не занимая много памяти
+#             if key not in slovar.keys():
+#                 slovar.update({key:[0, 0, 0, 0, 0]})
+#             slovar.get(key)[0] +=1
+#             if key == win: slovar.get(key)[1] +=1 
+#             elif win == '': 
+                
+#                 slovar.get(key)[2] += 1
+#             else: slovar.get(key)[3] += 1  
+
+#     for key in slovar.keys():
+#         slovar.get(key)[4] = slovar.get(key)[1]*3 + slovar.get(key)[2]
+#         print(key, end=':')
+#         for i in range(5):
+#             print(slovar.get(key)[i], end=' ')
+#         print()    
+#     return slovar  
+
+# def crez1(myl):
+#     slov1 = {}
+#     a = slov1.fromkeys([myl[0]],  [2, 0, 0, 2, 0])
+#     slov1.update(a)
+#     for key in slov1.keys():
+#             print(key, end=':')
+#             for i in range(5):   
+#                 print(slov1.get(key)[i], end=' ') 
+#     print()           
+#     return myl
+
+# def crez2(myl):
+#     slov2 = {}
+#     a = slov2.fromkeys([myl[0]],  [2, 1, 0, 1, 3])
+#     slov2.update(a)
+#     for key in slov2.keys():
+#             print(key, end=':')
+#             for i in range(5):
+#                 print(slov2.get(key)[i], end=' ')       
+#     print()
+#     return myl
+
+# def crez3(myl):
+#     slov3 = {}
+#     a = slov3.fromkeys([myl[0]],  [2, 2, 0, 0, 6])
+#     slov3.update(a)
+#     for key in slov3.keys():
+#             print(key, end=':')
+#             for i in range(5):
+#                 print(slov3.get(key)[i], end=' ') 
+#     print()
+#     return myl
+
+#     # Вводим значения
+# tablis(myl = ['Спартак  ',9,'Зенит    ',10])
+# print("-------------------")
+# tablis(myl = ['Локомотив',12,'Зенит    ',3])
+# print("-------------------")
+# tablis(myl = ['Спартак  ',8,'Локомотив',15])
+# print("------------------------------")
+# print("  Общяя статистика ")
+# crez1(myl = ['Спартак  '])
+# crez2(myl = ['Зенит    '])
+# crez3(myl = ['Локомотив'])
 
 
 
