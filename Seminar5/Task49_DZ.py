@@ -52,7 +52,7 @@ def reshenie():
     print(f' По правилу жеребьевки')
     player1 = 'Дмитрий'
     player2 = 'Борис'  
-    konfi = 100
+    # konfi = 100
     max_konfi = 28
     name = random.choice([0, 1])
     # print( count)

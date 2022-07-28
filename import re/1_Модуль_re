@@ -1,0 +1,18 @@
+# Модуль re
+
+# Вытащить из выражения все числа варианты
+
+# обычный цикл
+import re
+from this import d
+str = 'Это сторока 100 и в 490289 которой 98 есть числа 1 3 4'
+result = ''
+for char in str:
+    if char.isdigit():
+        result += char
+    else:
+        result += ' '
+print(result.split()) # первый варинат долгий 
+
+с помощью регулярного выражения
+print(re.findall(r'\d+', str)) # тот же варинат но в 1 строчку

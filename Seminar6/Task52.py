@@ -3,3 +3,19 @@
 # *Пример:* 
 
 # [1, 2, 3, 5, 1, 5, 3, 10] => [2, 10]
+
+text = [1, 2, 3, 5, 1, 5, 3, 10]
+print (text)
+def counts(text):
+    l = []
+    for i in text:
+        d = {i: text.count(i)} # ключ + значение ключа, в данном случае, пеодсчет количества каждого элементаиз списка text.count(i)
+        for i, y in d.items():
+            if y == 1:
+                l.append(i)
+    print(l)
+    return l
+counts(text)  
+
+       
+        
