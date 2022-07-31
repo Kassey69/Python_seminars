@@ -1,5 +1,9 @@
-# Модуль re
+# Модуль re 
+https://www.youtube.com/watch?v=8sv-6AN0_cg
 
+
+шпаргалка - https://chel-center.ru/python-yfc/2020/04/28/shpargalka-po-regulyarnym-vyrazheniyam/?ysclid=l65op4obir47173089
+\. - точка должна считаться обычной точкой, а не «любым символом». Это делается с помощью знака экранирования.
 # Вытащить из выражения все числа варианты
 
 # обычный цикл

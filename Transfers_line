@@ -7,6 +7,7 @@ slov1.update(a)
 print(slov1)
 for key in slov1.keys():
             print(key, end=':')
+
             for i in range(5):   
                 print(slov1.get(key)[i], end=' ') 
 print()  
@@ -49,3 +50,8 @@ for element in input().split():
 exp = ''
 for element in input():
     exp += str(element)
+
+
+n = list(str(n).replace('.',''))
+
+a = (str(g).replace('',''))

@@ -5,11 +5,10 @@ from collections import Counter
 import re
 from itertools import groupby
 
-
 def modul_sjatia():
     text = 'ssssssssssssssssskkkkkfryyyyyttttsreeee' 
     text = text.replace('',' ').split() 
-    print(text) # ['s', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 'k', 'k', 'k', 'k', 'k', 'f', 'r', 'y', 'y', 'y', 'y', 'y', 't', 't', 't']
+    # print(text) # ['s', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 's', 'k', 'k', 'k', 'k', 'k', 'f', 'r', 'y', 'y', 'y', 'y', 'y', 't', 't', 't']
     count = 1
     l = ''
     for i in range(len(text)-1): 
@@ -22,7 +21,6 @@ def modul_sjatia():
                                                             # а именно последний эдлемент text[-1]
     print(f'Модуль сжатия', l) #  Модуль сжатия 17s5k1f1r5y3t
     return l
-
 
 def modul_vostanovlenia(l):
     a = re.findall(r'\d+', l) # отделяем цифры от букв
@@ -43,7 +41,6 @@ def modul_vostanovlenia(l):
 
 l = modul_sjatia()    
 temp = modul_vostanovlenia(l)
-
 
 file_mod1 = l # создаем файл и передаем значения нашего полинома
 with open('modul_sjatia.txt', 'w') as data:
