@@ -55,3 +55,7 @@ for element in input():
 n = list(str(n).replace('.',''))
 
 a = (str(g).replace('',''))
+
+
+
+кнопочка F2 - заменяет везде текст одиннаковый, или параметры
