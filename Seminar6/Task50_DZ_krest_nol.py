@@ -42,7 +42,7 @@ def bul():
     while count != 3:   
         if name:
             print(f'Ваш ход Дмитрий')
-            operas = prover()
+            operas = prover() # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             print(operas)
             if operas == 1 and a[0][0] != 'X' and a[0][0] != 'O': 
                 a[0][0] = 'X' 

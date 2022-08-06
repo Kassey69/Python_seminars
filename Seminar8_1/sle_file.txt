@@ -1,0 +1,5 @@
+& C:/Python310/python.exe e:/Programming/Visual_Studio_Code/Python_seminars_replay/Seminar8_1/progravva222.py, 3, 2
+3, 4, 3
+Lvbnhbq, 12893812-34, sefhwef
+3, 3, 3
+23f423f, 23, 23
