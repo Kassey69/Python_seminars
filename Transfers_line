@@ -81,3 +81,15 @@ alt + enter навести и нажать на print b тому подобно�
 my_list.pop() наждать на  pop правой кнопкой мыши и наверсти  go to declaretion и там описаны все методы
 
 if len(input_str) > 15
+
+
+ slovar1 = {i : data[i] for i in range(len(data))} 
+        print(slovar1) - разбивает текст . вытаскивает их текстового файла
+
+with open('E:\Programming\Visual_Studio_Code\Python_seminars_replay\Seminar8_2\sleSH_file.txt', \
+        'r', encoding='utf-8') as file:
+        data = file.read().split()
+        red = []
+        slovar1 = {i : data[i] for i in range(len(data))} 
+        print(slovar1)
+        print(slovar1[2])

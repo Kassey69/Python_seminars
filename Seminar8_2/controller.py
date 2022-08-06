@@ -1,8 +1,11 @@
+
 import programs as pr
 import menu as menu
 import del_syroki as del_s
 import proverka_del as prov
-
+import izmenit as imp
+import import_bd as imports
+import eksport_bd as exs
 
 def button_click():
     x = menu.menu()
@@ -15,12 +18,13 @@ def button_click():
             del_s.delet()
         elif x == 3: 
             print('Изменить данные')
-            return 
+            imp.izm()
         elif x == 4: 
-            print('Импорт БД')
-            return 
+            print('Импорт нашей БД, показываем на экране')
+            imports.imports()
         elif x == 5: 
             print('Экспорт БД')
-            return 
+            exs.eksport()
     else: 
         print ('выход из программы') 
+      

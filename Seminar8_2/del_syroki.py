@@ -4,13 +4,16 @@ import prosmotr as pr
 import menu as menu
 import del_simbol as de
 import proverka_del as prov
+import controller as contr
 
 def delet():
 
     print(pr.prosm())
          
-    with open("E:\Programming\Visual_Studio_Code\Python_seminars_replay\Seminar8_2\sleSH2_file.txt", "r", encoding='utf-8') as input:
-        with open("E:\Programming\Visual_Studio_Code\Python_seminars_replay\Seminar8_2\ееemp.txt", "w", encoding='utf-8') as output:
+    with open("E:\Programming\Visual_Studio_Code\Python_seminars_replay\Seminar8_2\sleSH2_file.txt", "r", \
+        encoding='utf-8') as input:
+        with open("E:\Programming\Visual_Studio_Code\Python_seminars_replay\Seminar8_2\ееemp.txt", "w",\
+             encoding='utf-8') as output:
           
           
             x  =  prov.menu_proverka()
@@ -20,13 +23,12 @@ def delet():
 
             for line in input:
                 # if substring contain in a line then don't write it
-                if x not in line.strip("\n"):
+                if x not in line.strip("\n"): # мы пропускаем ее и она не попадает в список потому что сохраняем сразу
                     output.write(line)
-
-    # replace file with original name
     os.replace("E:\Programming\Visual_Studio_Code\Python_seminars_replay\Seminar8_2\ееemp.txt",  'E:\Programming\Visual_Studio_Code\Python_seminars_replay\Seminar8_2\sleSH2_file.txt')
 
     print(pr.prosm())
+    contr.button_click()
     return line
 
     
