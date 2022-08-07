@@ -10,7 +10,7 @@ def wef():
     count = 0
     redor = []
     i = 0
-    cor = 7
+    cor = 4
     # for i in range(40):
     while cor != 0:
         count = 0           
@@ -37,7 +37,6 @@ def wef():
         else: 
             print (f" Должность уже занята, выберите другое{sotrudnik}, не прошло {count}") 
         
-
         # sotrudnik = {v:k for k, v in sotrudnik.items()}
         # print(sotrudnik)
         
@@ -45,8 +44,7 @@ def wef():
             sotr = list(sotrudnik.keys())
     
         sot = ",".join(item for item in sotr)
-        otdel1 = '' 
-        
+        otdel1 = ''       
         if count == 1: 
         
             otdel1 = str(f'Идентификатор') + str(' ') + str('Имя: ') + str(sot) + str('; ID отдела: ') + str(1) + str(' ') + str(otdel[1]) \
@@ -60,11 +58,9 @@ def wef():
                 otdel3 = str(f'Идентификатор') + str(' ') + str('Имя: ')+ str(sot) +  str('; ID отдела: ') + str(3) + str(' ') \
                     + str(otdel[3]) +  str('; ID Должности: ') + str(3) + str(' ') + str(doljnost[3])
                 print(f'Идентификатор Имя: {sot}; ID отдела: {otdel[3]}; ID Должности:{doljnost[3]}')
-    
-        
+         
         with open('E:\Programming\Visual_Studio_Code\Python_seminars_replay\Seminar8_2\sleSH_file.txt', 'a+', encoding='utf-8') as file:
-            # data = file.read()
-        
+            # data = file.read() 
     
             if count == 1 : 
                 i +=1 
@@ -92,25 +88,29 @@ def wef():
         inputFile.close()
         outputFile.close()
         cor -=1
-        print(f' Осталось для заполнения {cor}, думаю вам хватит')
+        print(f' Осталось до выхода в главное меню {cor}, думаю вам хватит, 1 отдел заполянется 1 раз')
     else:
         cont.button_click()   
        
-     
+    return sotrudnik
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
-            # q = (input ('Вы можете завершить нажав на 6')) 
-            # while True:
-            #     try:
-            #         x = int(input('Выберите варианты \n (1)добавить сотрудника (2)удалить сотрудника; (3)Изменить данные (4) Импорт БД (5) Экспорт БД (6)Выход из программы\nВвод: '))
-            #         while x < 1 or x > 7:
-            #             x = int(input('Введите корректное число')   ) 
-            #     except ValueError: print("Вы ввели не число. Повторите ввод")
-            #     else:
-            #         while x != 6:
-          #             if x == 6: return mn.sotrydniki()
       
           
-    return sotrudnik
+ 
 
 
 

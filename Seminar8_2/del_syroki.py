@@ -33,12 +33,6 @@ def delet():
 
     
 
-    
-
-
-
-
-
     # with fileinput.FileInput('E:\Programming\Visual_Studio_Code\Python_seminars_replay\Seminar8_2\sleSH_file.txt',  \
     #     inplace=True, backup='.bak') as file:
     #     for line in file:

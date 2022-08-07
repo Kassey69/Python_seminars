@@ -8,6 +8,8 @@ import import_bd as imports
 import eksport_bd as exs
 
 def button_click():
+    print('\nИнформационная система позволяющая работать с сотрудниками некой компании\n'
+          '---------------------------------------------------------------------------')
     x = menu.menu()
     while x != 6:
         if x == 1: 
