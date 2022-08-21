@@ -5,9 +5,9 @@ def read_file(file_name):
     return data
 
 # Метод позволяет записать текст в файл
-def write_file(file_name, text):
-    with open('E:\Programming\Visual_Studio_Code\Python_seminars_replay\Seminar8_1\slovar_file.txt', 'w', encoding='utf-8') as file:
-        file.write(text)
+def write_file(text):
+    with open('E:\Programming\Visual_Studio_Code\Python_seminars_replay\Seminar8_1\slovar_file.txt', 'a+', encoding='utf-8') as file:
+        file.write(text + '\n')
 
 
 # def log_data(s):

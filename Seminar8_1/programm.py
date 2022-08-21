@@ -8,12 +8,20 @@
 #     *Фамилия_2*
 
 
-def slovar(number, comment, name):
+def slovar():
+    global name, number, comment
+    name = input('Введиет имя')
+    number = input('Ввкедите телефон')
+    comment = input( ' Введите коментарии')
     data = (number, comment)
     book = {}
     book[name] = data
     print(book)
     return book
+
+
+
+
 
 
 

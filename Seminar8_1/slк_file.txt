@@ -1,1 +1,0 @@
-& C:/Python310/python.exe e:/Programming/Visual_Studio_Code/Python_seminars_replay/Seminar8_1/progravva222.py, & C:/Python310/python.exe e:/Programming/Visual_Studio_Code/Python_seminars_replay/Seminar8_1/progravva222.py, & C:/Python310/python.exe e:/Programming/Visual_Studio_Code/Python_seminars_replay/Seminar8_1/progravva222.py
