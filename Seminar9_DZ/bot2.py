@@ -3,15 +3,13 @@ import random
 
 from telebot import types #keyboard module
 
-TOKEN = '5575535064:AAHu_c7W5YhW5fd8rqjvHVy8osj3PiajeSU'
+TOKEN = '5575535064:AAHu_c7W5YhW5fd8rqjvHVy8osj3PiajeSU' # наш бот
 bot = telebot.TeleBot(TOKEN)
 
-@bot.message_handler(commands=['start'])
+@bot.message_handler(commands=['start']) # запускаем бот
 
-def game_start(message):
-	
-	# Build keyboard
-	# 
+def game_start(message): # создаем клавеатуру кнопки для нажатия
+
 	keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
 	btn1 = types.KeyboardButton('Камень🤜')
 	btn2 = types.KeyboardButton('Ножницы✌️')
@@ -19,18 +17,15 @@ def game_start(message):
 	keyboard.add(btn1, btn2, btn3)
 	bot.send_message(message.chat.id, 'Камень🤜, ножницы✌️, бумага✋ Выберите жест: ',\
 		 reply_markup=keyboard)
-         
-@bot.message_handler(content_types=['text'])
+
+@bot.message_handler(content_types=['text']) # основной код программы
 
 def game(message):
 	computer = random.choice(['Камень🤜', 'Ножницы✌️', 'Бумага✋'])
 	if message.text == computer:
 		
 		bot.send_message(message.chat.id, 'Боевая ничья! Для начала новой игры пишите /start')
-		
 
-			# общий счет {int(result1 + 1)} {int(result1 + 1)
-	
 	else:
 		if message.text == 'Камень🤜':
 			if computer == 'Ножницы✌️':
