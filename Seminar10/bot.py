@@ -1,6 +1,9 @@
 # Use this token to access the HTTP API:
 # 5575535064:AAHu_c7W5YhW5fd8rqjvHVy8osj3PiajeSU
 
+# CommandHandler - реагимрует на команды print и input меняем на это
+# MessageHandler - реагирует на сообщения
+# все о создании кнопок ботов и прочем https://habr.com/ru/post/580408/ 
 
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler, Filters

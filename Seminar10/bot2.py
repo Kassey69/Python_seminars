@@ -1,56 +1,94 @@
-import telebot 
-import random
+# Use this token to access the HTTP API:
+# 5575535064:AAHu_c7W5YhW5fd8rqjvHVy8osj3PiajeSU
 
-from telebot import types #keyboard module
+# CommandHandler - реагимрует на команды print и input меняем на это
+# MessageHandler - реагирует на сообщения
+# все о создании кнопок ботов и прочем https://habr.com/ru/post/580408/ 
 
-TOKEN = '5575535064:AAHu_c7W5YhW5fd8rqjvHVy8osj3PiajeSU' # наш бот
-bot = telebot.TeleBot(TOKEN)
+import json
+from telegram import Update
+from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler, Filters
 
-@bot.message_handler(commands=['start']) # запускаем бот
+updater = Updater('5575535064:AAHu_c7W5YhW5fd8rqjvHVy8osj3PiajeSU')
 
-def game_start(message): # создаем клавеатуру кнопки для нажатия
+def hello(update: Update, context: CallbackContext) -> None:
+    update.message.reply_text(f'Hello {update.effective_user.first_name}')
 
-	keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
-	btn1 = types.KeyboardButton('Камень🤜')
-	btn2 = types.KeyboardButton('Ножницы✌️')
-	btn3 = types.KeyboardButton('Бумага✋')
-	keyboard.add(btn1, btn2, btn3)
-	bot.send_message(message.chat.id, 'Камень🤜, ножницы✌️, бумага✋ Выберите жест: ',\
-		 reply_markup=keyboard)
+def start(update: Update, context: CallbackContext) -> None:
+    update.message.reply_text(f'К работе готов')
 
-@bot.message_handler(content_types=['text']) 
+users = {'Алешка': '7777755', 'Мишка':'3344343', 'Маис': '34234234' } # создали словарь
 
-def game(message): # основной код программы
-	computer = random.choice(['Камень🤜', 'Ножницы✌️', 'Бумага✋'])
-	if message.text == computer:
-		
-		bot.send_message(message.chat.id, 'Боевая ничья! Для начала новой игры пишите /start')
+def dict(update: Update, context: CallbackContext): # обработка сообщений
+	if (update.message.text in users ): # если ключ есть в users то мы выводим его значение
+			update.message.reply_text(users[update.message.text]) # то мы выводим его значение
 
-	else:
-		if message.text == 'Камень🤜':
-			if computer == 'Ножницы✌️':
-				bot.send_message(message.chat.id, 'Поздравляю с победой! У меня была {}. \
-					Для начала новой игры пишите /start'.format(computer))
-			else:
-				bot.send_message(message.chat.id, 'Извените, но Вы проиграли 😢. У меня был(и/a) {}. \
-					Для начала новой игры пишите /start'.format(computer))
-		elif message.text == 'Ножницы✌️':
-			if computer == 'Бумага✋':
-				bot.send_message(message.chat.id, 'Поздравляю с победой! У меня была {}. \
-					Для начала новой игры пишите /start'.format(computer))
-			else:
-				bot.send_message(message.chat.id, 'Извените, но Вы проиграли 😢. У меня был(и/a) {}.\
-					 Для начала новой игры пишите /start'.format(computer))
-		elif message.text == 'Бумага✋':
-			if computer == 'Камень🤜':
-				bot.send_message(message.chat.id, 'Поздравляю с победой! У меня была {}. \
-					Для начала новой игры пишите /start'.format(computer))
-			else:
-				bot.send_message(message.chat.id, 'Извените, но Вы проиграли 😢. У меня был(и/a) {}. \
-					Для начала новой игры пишите /start'.format(computer))
-			
-	
-	
-bot.polling(none_stop=True)
 
-        
+def save_1(update: Update, context: CallbackContext):
+	with open('E:\Programming\Visual_Studio_Code\Python_seminars_replay\Seminar10\phonenumber.json',\
+		'w', encoding='utf-8') as pN:
+		pN.write(json.dumps(users, ensure_ascii=False))
+	# print('успешно созранено')
+	update.message.reply_text(f'успешно созранено')
+
+
+def del_1(update: Update, context: CallbackContext):
+	with open('E:\Programming\Visual_Studio_Code\Python_seminars_replay\Seminar10\phonenumber.json',\
+		'r', encoding='utf-8') as pN:
+		users = json.load(pN)
+		del users['Алешка']
+		update.message.reply_text(f'успешно удалено')
+	with open('E:\Programming\Visual_Studio_Code\Python_seminars_replay\Seminar10\phonenumber.json',\
+		 'w', encoding='utf-8') as pN:
+      		json.dump(users, pN, ensure_ascii=False)		
+# print('успешно удалено')
+
+updater.dispatcher.add_handler(CommandHandler('hello', hello))
+updater.dispatcher.add_handler(CommandHandler('start', start))
+# мы связываем какую то описанную выше функцию и мы сявязваем с каим то типом либо 
+# обработки команды CommandHandler
+# либо обработка сообщений MessageHandler
+
+updater.dispatcher.add_handler(CommandHandler('save_1', save_1))
+updater.dispatcher.add_handler(CommandHandler('del_1', del_1))
+updater.dispatcher.add_handler(MessageHandler(Filters.text, dict))
+
+print('server start')
+updater.start_polling()
+updater.idle()
+
+
+
+
+
+
+
+
+
+
+# path = 'E:\Programming\Visual_Studio_Code\Python_seminars_replay\Seminar10\phonenumber.json'
+# f = open(path, 'w')
+# data = f.write() + ' '
+# f.close()
+
+# dict1 = {}
+
+
+
+
+
+# from telegram import Update
+# from telegram.ext import Updater, CommandHandler, CallbackContext
+
+
+# def hello(update: Update, context: CallbackContext) -> None:
+#     update.message.reply_text(f'Hello {update.effective_user.first_name}')
+
+
+# updater = Updater('YOUR TOKEN HERE')
+
+# updater.dispatcher.add_handler(CommandHandler('hello', hello))
+
+# print('server start')
+# updater.start_polling()
+# updater.idle()
